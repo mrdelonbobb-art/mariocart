@@ -15,5 +15,7 @@ public class MarioCartApp {
         myGarage.add(theCoinPile);
 
         System.out.println("my garage is worth"+ myGarage.getTotalValueOfGarageValuables());
+        System.out.println("");
+        myGarage.showAllValuables;
     }
 }

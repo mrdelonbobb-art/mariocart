@@ -2,5 +2,6 @@ package com.pluralsight;
 
 public interface valuable {
     //anything implementing this interface will override the getValue method
+    //interface describes what public method has to be emplimented
     public double getValue();
 }

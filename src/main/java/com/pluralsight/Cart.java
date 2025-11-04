@@ -1,12 +1,12 @@
 package com.pluralsight;
 
-public abstract class Cart implements valuable{
+public abstract class Cart implements valuable, Comparable<Cart>{
     private  String name;
     private double basePrice;
 
     public Cart(String name,double basePrice){
         this.name = name;
-        this.basePrice;
+        this.basePrice = basePrice;
     }
 
     public String getName() {
@@ -27,5 +27,15 @@ public abstract class Cart implements valuable{
     @Override
     public double getValue(){
         return getBasePrice();
+
+    }
+    @Override
+    public String toString(){
+        return getClass().getSimpleName() + (name) + getValue();
+    }
+    @Override
+    //  compare to helps sort lists
+    public int compareTo(Cart someOtherCart){
+        return this.getName().compareToIgnoreCase(someOtherCart.getName());
     }
 }
